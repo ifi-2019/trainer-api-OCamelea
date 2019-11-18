@@ -6,5 +6,7 @@ public interface TrainerService {
 
     Iterable<Trainer> getAllTrainers();
     Trainer getTrainer(String name);
+    Trainer setTrainerName(Trainer trainer);
     Trainer createTrainer(Trainer trainer);
+    Trainer putTrainer(Trainer trainer);
 }
