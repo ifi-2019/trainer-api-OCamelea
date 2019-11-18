@@ -28,12 +28,17 @@ public class TrainerController {
 
     @PostMapping("/")
     Trainer setTrainerName(@RequestBody Trainer trainer){
-        return trainerService.setTrainerName(trainer);
+        return trainerService.postTrainer(trainer);
     }
 
     @PutMapping("/{name}")
     Trainer putTrainer(@RequestBody Trainer trainer){
         return trainerService.putTrainer(trainer);
+    }
+
+    @DeleteMapping("/{name}")
+    void deleteTrainer(@RequestBody Trainer trainer){
+        trainerService.deleteTrainer(trainer);
     }
 
 }

@@ -32,12 +32,17 @@ public class TrainerServiceImpl implements TrainerService {
     }
 
     @Override
-    public Trainer setTrainerName(Trainer trainer) {
+    public Trainer postTrainer(Trainer trainer) {
        return trainerRepository.save(trainer);
     }
 
     @Override
     public Trainer putTrainer(Trainer trainer) {
         return trainerRepository.save(trainer);
+    }
+
+    @Override
+    public void deleteTrainer(Trainer trainer) {
+         trainerRepository.delete(trainer);
     }
 }
