@@ -18,23 +18,23 @@ public class TrainerApi {
         SpringApplication.run(TrainerApi.class, args);
     }
 
-//    @Bean
-//    @Autowired
-//    public CommandLineRunner demo(TrainerRepository repository) {
-//        return (args) -> {
-//            var ash = new Trainer("Ash");
-//            var pikachu = new Pokemon(25, 18);
-//            ash.setTeam(List.of(pikachu));
-//
-//            var misty = new Trainer("Misty");
-//            var staryu = new Pokemon(120, 18);
-//            var starmie = new Pokemon(121, 21);
-//            misty.setTeam(List.of(staryu, starmie));
-//
-//            // save a couple of trainers
-//            repository.save(ash);
-//            repository.save(misty);
-//        };
-//    }
+    @Bean
+    @Autowired
+    public CommandLineRunner demo(TrainerRepository repository) {
+        return (args) -> {
+            var ash = new Trainer("Ash");
+            var pikachu = new Pokemon(25, 18);
+            ash.setTeam(List.of(pikachu));
+
+            var misty = new Trainer("Misty");
+            var staryu = new Pokemon(120, 18);
+            var starmie = new Pokemon(121, 21);
+            misty.setTeam(List.of(staryu, starmie));
+
+            // save a couple of trainers
+            repository.save(ash);
+            repository.save(misty);
+        };
+    }
 
 }
