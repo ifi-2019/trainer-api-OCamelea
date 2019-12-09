@@ -23,7 +23,7 @@ public class Trainer {
 
     public void setPassword(String password) {
         this.password=password;
-        
+
     }
 
     public Trainer() {
